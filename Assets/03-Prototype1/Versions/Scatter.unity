@@ -596,9 +596,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rubblePrefab: {fileID: 2834485712614229751, guid: 7c9560eb0198d754b849d746b8269cc4, type: 3}
+  player: {fileID: 1994384114}
   spd: 14
   edgeCoord: 7
   flip_Chance: 0.01
+  canDrop: 1
 --- !u!4 &361953866
 Transform:
   m_ObjectHideFlags: 0
