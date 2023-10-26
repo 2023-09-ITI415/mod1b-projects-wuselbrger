@@ -7,6 +7,9 @@ TagManager:
   - Apple
   - Basket
   - Projectile
+  - Wall
+  - Rubble
+  - Ground
   layers:
   - Default
   - TransparentFX
