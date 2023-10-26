@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision coll){
         if(coll.gameObject.tag == "Rubble"){
-            this.gameObject.SetActive(false);
+            Destroy(gameObject);
             deathText.SetActive(true);
         }
     }

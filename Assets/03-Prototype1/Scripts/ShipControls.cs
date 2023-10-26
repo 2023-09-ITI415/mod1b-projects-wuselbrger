@@ -5,9 +5,11 @@ using UnityEngine;
 public class ShipControls : MonoBehaviour
 {
     public GameObject rubblePrefab;
+    public GameObject player;
     public float spd = 14f;
     public float edgeCoord = 7f;
     public float flip_Chance = 0.01f;
+    public bool canDrop = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,8 @@ public class ShipControls : MonoBehaviour
             spd = Mathf.Abs(spd);
         else if(pos.z > edgeCoord)
             spd = -Mathf.Abs(spd);
+        if(player == null)
+            canDrop = false;
     }
 
     void FixedUpdate(){
@@ -43,7 +47,9 @@ public class ShipControls : MonoBehaviour
         Vector3 rubbleSpawn = transform.position;
         rubbleSpawn.y = transform.position.y - 3f;
         rubble.transform.position = rubbleSpawn;
-        Invoke("RubbleDrop", 3f);
+        if(canDrop){
+            Invoke("RubbleDrop", 3f);
+        }
     }
 
 }
